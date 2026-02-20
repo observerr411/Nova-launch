@@ -1,1 +1,1 @@
-export { StellarService } from './StellarService';
+export { WalletService } from './WalletService';
