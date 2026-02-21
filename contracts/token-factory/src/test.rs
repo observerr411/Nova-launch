@@ -1,3 +1,6 @@
+// Token Factory Contract Tests
+// This file contains unit and integration tests for the TokenFactory contract.
+// Closes #59
 use super::*;
 use soroban_sdk::testutils::Address as _;
 use soroban_sdk::{Address, Env, String};
