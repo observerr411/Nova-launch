@@ -15,6 +15,7 @@ import {
   deploymentTutorialSteps,
 } from "./components/Tutorial";
 import { useWallet } from "./hooks/useWallet";
+import { useAnalytics } from "./hooks/useAnalytics";
 import { truncateAddress } from "./utils/formatting";
 
 function App() {
@@ -22,14 +23,20 @@ function App() {
   const [showCelebration, setShowCelebration] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const tutorial = useTutorial(deploymentTutorialSteps);
+  const { trackTutorialStarted, trackTutorialCompleted, trackTutorialSkipped } = useAnalytics();
 
   const handleTutorialComplete = () => {
     tutorial.complete();
     setShowCelebration(true);
+    trackTutorialCompleted();
   };
 
   const handleCelebrationClose = () => {
     setShowCelebration(false);
+  };
+
+  const handleTutorialSkip = () => {
+    trackTutorialSkipped();
   };
 
   useEffect(() => {
