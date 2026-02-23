@@ -1,8 +1,0 @@
-{
-  "/_global-error/page": "/_global-error",
-  "/_not-found/page": "/_not-found",
-  "/api/burn/route": "/api/burn",
-  "/api/health/route": "/api/health",
-  "/api/metadata/route": "/api/metadata",
-  "/api/tokens/route": "/api/tokens"
-}
